@@ -1,0 +1,16 @@
+#read .txt file
+library("readr")
+dt <- read_tsv("E:/xxx")
+fly1<-dt[Arena1]
+fly2<-dt[Arena2]
+fly3<-dt[Arena3]
+
+#making the graphs
+library(ggplot)
+p<-ggplot(dt, aes(x=TimePos, y=RelativePosX))
+p+geom_line()
+
+#traces of arenas next to each other -- columns
+p+geom_line()+facet_grid(~ Arena)
+#traces of arenas next to each other -- rows
+p+geom_line()+facet_grid(Arena ~.)
