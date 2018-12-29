@@ -10,6 +10,12 @@ library(ggplot)
 p<-ggplot(dt, aes(x=TimePos, y=RelativePosX))
 p+geom_line()
 
+#adding colour layers
+p + annotate("rect", xmin = 3, xmax = 4.2, ymin = 12, ymax = 21,
+             alpha("chartreuse", .2))
+p + annotate("rect", xmin = 3, xmax = 4.2, ymin = 12, ymax = 21,
+             alpha("red", .2))
+
 #traces of arenas next to each other -- columns
 p+geom_line()+facet_grid(~ Arena)
 #traces of arenas next to each other -- rows
