@@ -1,9 +1,9 @@
 #read .txt file
 library("readr")
 dt <- read_tsv("E:/xxx")
-fly1<-dt[Arena1]
-fly2<-dt[Arena2]
-fly3<-dt[Arena3]
+fly1 <- subset(dt, Arena == '1')
+fly2 <- subset(dt, Arena == '2')
+fly3 <- subset(dt, Arena == '3')
 
 #making the graphs
 library(ggplot)
