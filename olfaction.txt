@@ -1,4 +1,0 @@
-p + annotate("rect", xmin = 3, xmax = 4.2, ymin = 12, ymax = 21,
-             alpha("chartreuse", .2))
-p + annotate("rect", xmin = 3, xmax = 4.2, ymin = 12, ymax = 21,
-             alpha("red", .2))
